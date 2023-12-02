@@ -4,7 +4,7 @@
 
 # Projects structure
 
-Now we implement only one project structure as in the image below
+Now we implement only one project structure as in the image below<br/>
 ![img](./assets/Capture.PNG)
 
 ## folders
