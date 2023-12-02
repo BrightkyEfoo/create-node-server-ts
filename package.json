@@ -1,0 +1,25 @@
+{
+  "name": "create-node-server-ts",
+  "version": "1.0.1",
+  "description": "A simple cmd line package that help to create a new project folder with all files nedeed to start an express server on node js with typescript",
+  "main": "dist/app.js",
+  "scripts": {
+    "test": "exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BrightkyEfoo/create-node-server-ts.git"
+  },
+  "keywords": [
+    "node.js",
+    "express",
+    "typescript",
+    "REST-api"
+  ],
+  "author": "BrightkyEfoo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BrightkyEfoo/create-node-server-ts/issues"
+  },
+  "homepage": "https://github.com/BrightkyEfoo/create-node-server-ts#readme"
+}
