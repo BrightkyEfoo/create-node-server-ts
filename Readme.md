@@ -5,7 +5,7 @@
 # Projects structure
 
 Now we implement only one project structure as in the image below<br/>
-![img](./assets/Capture.PNG)
+![img](https://raw.githubusercontent.com/BrightkyEfoo/create-node-server-ts/3409a4a6d9079ab43b7b37a43f614ef59361dfac/assets/Capture.PNG?token=GHSAT0AAAAAACJZNTLVQHTI2U25BACY46MYZLLG3EA)
 
 ## folders
 
@@ -32,29 +32,38 @@ export const readAllAppHandler = async (req: Request, res: Response) => {
 };
 
 ```
+
 #### database
+
 It's where you should store your models and mock data
-you can evenly add another file for exporting functions related to manage connection to your database. This folder is seperate into 2 sub-folders : 
+you can evenly add another file for exporting functions related to manage connection to your database. This folder is seperate into 2 sub-folders :
+
 - mock
 - models
 
 #### middlewares
+
 here's where you should save your middleware functions
 
 #### routes
+
 Define all of your api routes and endPoints
 
 #### schemas
+
 Save Schemas for zod validation or any validation library you want
 
 #### services
+
 Here you have to save all your services
 
 #### typescript
+
 Store your <span style="color:green;">types</span>, <span style="color:green;">interfaces</span> etc...
 
 #### utils
-Here you can store all functions that you think they're very usefull, like a errorHandler maybe. Just an example : 
+
+Here you can store all functions that you think they're very usefull, like a errorHandler maybe. Just an example :
 
 ```
 import { Response } from "express";
@@ -68,6 +77,34 @@ function errHandler(error: any, res: Response, message: string) {
 }
 
 export default errHandler;
+```
+
+# Dependencies and devDependencies
+
+```
+"devDependencies": {
+    "@types/bcrypt": "^5.0.1",
+    "@types/config": "^3.3.2",
+    "@types/cors": "^2.8.15",
+    "@types/express": "^4.17.20",
+    "@types/jsonwebtoken": "^9.0.4",
+    "@types/morgan": "^1.9.9",
+    "ts-node-dev": "^2.0.0",
+    "@types/node": "^20.8.10",
+    "@types/serve-favicon": "^2.5.7",
+    "morgan": "^1.10.0",
+    "rimraf": "^5.0.5"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "config": "^3.3.9",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "dotenv": "^16.3.1",
+    "serve-favicon": "^2.5.0",
+    "zod": "^3.22.4"
+  }
 ```
 
 # Usage
