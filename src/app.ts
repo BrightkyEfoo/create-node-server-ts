@@ -1,10 +1,12 @@
+#! /usr/bin/env node
 import shell from "shelljs";
 import { rimrafSync } from "rimraf";
 import { readFileSync, readSync, writeFileSync } from "fs";
 import path from "path";
 
 const main = async () => {
-  const root = process.argv[2] || "test-project";
+  const root = process.argv[2] || ".";
+  const rootPath = path.resolve(root);
   const myPath = path.resolve(process.argv[1]);
   let resStr: string;
   rimrafSync(root);
@@ -17,7 +19,7 @@ const main = async () => {
   shell.cp("-r", path.join(myPath, "..", "..", "files", ".*"), ".");
   //   read package.json file
   const packageJson = JSON.parse(
-    readFileSync(path.join(root, "package.json"), "utf-8")
+    readFileSync(path.join(rootPath, "package.json"), "utf-8")
   );
   packageJson.description =
     "Created with create-node-express-ts by BrightkyEfoo";
@@ -49,17 +51,19 @@ const main = async () => {
   };
 
   writeFileSync(
-    path.join(root, "package.json"),
+    path.join(rootPath, "package.json"),
     JSON.stringify(packageJson, null, 2)
   );
   //   shell.exec("npm i");
   //   shell.exec("npm run dev");
   //   Start spinner
+  // shell.cd(path.resolve(root));
   resStr = shell.exec("npm i");
   //   stop spinner
 
   shell.echo(`
-  Success. Try to run npm run dev
+  Success. 
+  go to your new folder and Try to run npm run dev
   `);
 };
 

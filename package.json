@@ -4,9 +4,9 @@
   "description": "A simple cmd line package that help to create a new project folder with all files nedeed to start an express server on node js with typescript",
   "main": "dist/app.js",
   "scripts": {
-    "start": "npm run build && node build/src/app.js",
+    "start": "npm run build && node dist/src/app.js",
     "test": "exit 0",
-    "build": "rimraf -rf dist && tsc",
+    "build": "rimraf -rf dist && tsc && cpy ./files ./dist",
     "dev": "ts-node-dev --respawn --transpile-only src/app.ts"
   },
   "repository": {
@@ -27,6 +27,8 @@
   "homepage": "https://github.com/BrightkyEfoo/create-node-server-ts#readme",
   "dependencies": {
     "@types/node": "^20.10.2",
+    "cp": "^0.2.0",
+    "cpy-cli": "^5.0.0",
     "rimraf": "^5.0.5",
     "shelljs": "^0.8.5",
     "ts-node-dev": "^2.0.0",
@@ -34,5 +36,6 @@
   },
   "devDependencies": {
     "@types/shelljs": "^0.8.15"
-  }
+  },
+  "bin": "dist/src/app.js"
 }
