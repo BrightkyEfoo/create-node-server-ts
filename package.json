@@ -7,7 +7,7 @@
     "start": "npm run build && node build/src/app.js",
     "test": "exit 0",
     "build": "rimraf -rf dist && tsc",
-    "dev": "ts-node-dev --respawn --transpile-only src/app.ts ../test-pp"
+    "dev": "ts-node-dev --respawn --transpile-only src/app.ts"
   },
   "repository": {
     "type": "git",
