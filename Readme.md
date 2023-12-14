@@ -112,6 +112,7 @@ export default errHandler;
 Open a terminal, then install the package globally using this command : `npm i -g create-node-express-ts`
 Then navigate to the parent folder of the folder you want populate.
 Then run the command `create-node-server-ts [projectFolder]`
+if You want use js anyway for your server code, then you can add the flag `--template=js` after the previous command and run it. The project will be initialized without TypeScript but rather with JavaScript. And the validation library will be Joi instead of Zod
 It will take a couple of minutes it depend on your network speed, but be patient.
 after that you have to navigate to the project folder and just run `npm run dev`
 then open your favorite browser and navigate to http://localhost:9000

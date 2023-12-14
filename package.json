@@ -1,6 +1,6 @@
 {
   "name": "create-node-server-ts",
-  "version": "1.3.6",
+  "version": "1.3.7",
   "description": "A simple cmd line package that help to create a new project folder with all files nedeed to start an express server on node js with typescript",
   "main": "dist/app.js",
   "scripts": {
