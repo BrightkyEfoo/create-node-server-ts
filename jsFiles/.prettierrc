@@ -1,0 +1,14 @@
+{
+  "arrowParens": "avoid",
+  "trailingComma": "es5",
+  "singleQuote": true,
+  "semi": true,
+  "overrides": [
+    {
+      "files" : "*.js",
+      "options": {
+        "printWidth": 140
+      }
+    }
+  ]
+}
